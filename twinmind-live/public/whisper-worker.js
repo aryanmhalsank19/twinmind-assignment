@@ -10,7 +10,7 @@ self.addEventListener("message", async ({ data }) => {
     try {
       transcriber = await pipeline(
         "automatic-speech-recognition",
-        "Xenova/whisper-large-v3-turbo",
+        "Xenova/whisper-base",
         {
           dtype: "q4",
           progress_callback: (progress) => {
