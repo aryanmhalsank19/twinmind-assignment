@@ -2,8 +2,6 @@ import { NextRequest } from "next/server";
 import { createGroq } from "@ai-sdk/groq";
 import { streamText } from "ai";
 
-export const runtime = "edge";
-
 const groq = createGroq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function POST(req: NextRequest) {
